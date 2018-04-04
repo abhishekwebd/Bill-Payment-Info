@@ -6,6 +6,7 @@ $(window).load(function() {
 
 
 $("#loginbtn").click(function(){
+
   $(".loader").fadeIn("slow");
   var loginemail=$("#vendorno").val();
   var loginpassword = $("#loginpassword").val();
