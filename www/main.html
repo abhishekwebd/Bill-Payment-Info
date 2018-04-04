@@ -1,0 +1,132 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Main</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Creative Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<script src="js/index.js"></script>
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/ak.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- //online-fonts -->
+<style type="text/css">
+	div.fixed {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+ 
+}
+table tr td{
+	border-color: #245406 !important;
+}
+</style>
+	<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			if(!sessionStorage.getItem("username"))
+			{
+				document.getElementById("vendorname").innerText = localStorage.getItem("vendorname");
+				document.getElementById("vendorno").innerText = localStorage.getItem("username");
+			}else{
+				document.getElementById("vendorname").innerText = sessionStorage.getItem("vendorname");
+				document.getElementById("vendorno").innerText = sessionStorage.getItem("empname");
+			}
+			loadbillno();
+			loadnote();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="loader"></div>
+	<div class="ak-row" style="background-color:#245406;">
+		<div class="ak-cell ak-container ak-padding-16">
+			<img src="img/logo.png">
+		</div>
+		<div class="ak-cell ak-container " >
+			<h3 class="ak-text-white"><b>DLW Bill Payment Information</b></h3>
+		</div>
+		<div class="ak-cell ak-container  ak-padding-16" >
+			<button class="ak-red "><span class="fa fa-2x fa-power-off ak-text-white" aria-hidden="true" id="logoutbtn"></span></button>
+		</div>
+	</div>
+	
+	<div class="ak-row ak-padding-16">
+		<div class="ak-cell ak-container">
+			Welcome <span id="vendorname"></span>/<label id="vendorno"></label>
+		</div>
+
+		<div class="ak-cell ak-container">
+Bill No.
+			<select id="billlist">
+
+			</select>
+		</div>
+	</div>
+
+<!-- Current Date : 
+<script type="text/javascript">
+	var today = new Date();
+	var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+	document.write(date);
+</script> -->
+
+<div class="ak-row ak-card-4" style="background-color: #245406; color: white;">
+	<div class="ak-cell ak-container ak-left" >
+		<b>Bill Details</b>
+	</div>
+</div>
+<table class="ak-table ak-border-brown">
+	<tr>
+		<td>CO6_NO</td>
+		<td><span id="co6no"></span></td>
+	</tr>
+		<tr>
+		<td>CO6_DATE</td>
+		<td><span id="co6date"></span></td>
+	</tr>
+		<tr>
+		<td>CO7_NO</td>
+		<td><span id="co7no"></span></td>
+	</tr>
+		<tr>
+		<td>CO7_DATE</td>
+		<td><span id="co7date"></span></td>
+	</tr>
+		<tr>
+		<td>AMT_PSD</td>
+		<td><span id="amtpsd"></span></td>
+	</tr>
+</table>
+
+
+<br>
+<div class="fixed">
+<b>Note</b> : <label id="note"></label>
+</div>
+<script src="script/sc_index.js"></script>
+</body>
+
+</html>

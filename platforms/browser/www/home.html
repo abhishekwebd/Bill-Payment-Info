@@ -1,0 +1,115 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Login</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Creative Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script type="application/x-javascript">
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+	<!-- css files -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- <link rel="stylesheet" href="css/ak.css" type="text/css" media="all" /> -->
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
+	<script src="js/jquery.js"></script>
+	
+	<!-- online-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+	<!-- //online-fonts -->
+
+	<script type="text/javascript">
+		$(document). ready(function(){
+			sessionStorage.setItem("checkboxstat","unchecked");
+			$('input[type="checkbox"]'). click(function(){
+				if($(this). prop("checked") == true){
+					sessionStorage.setItem("checkboxstat","checked");
+				}
+				else if($(this). prop("checked") == false){
+					sessionStorage.setItem("checkboxstat","unchecked");
+				}});
+		});
+		if(localStorage.getItem("loginstat") === "rememberit")
+		{
+			if(localStorage.getItem("stat") === "1"){window.location.href = "main.html";}else{window.location.href = "changepassword.html";}
+		}
+	
+	</script>
+
+</head>
+
+<body>
+	<!--header-->
+	<div class="header-w3l">
+		<img src="img/logo.png" width="60px">
+
+		<h1>
+
+			<span>L</span>ogin
+			<span>H</span>ere</h1><br>
+			<h3 style="color:#245406;">DLW Bill Payment Information</h3>
+		</div>
+		<!--//header-->
+		<div class="main-content-agile">
+			<div class="sub-main-w3">
+				<!-- <h2>Login Here</h2> -->
+				
+				<div class="pom-agile">
+					<span class="fa fa-user-o" aria-hidden="true"></span>
+					<input placeholder="Vendor No" name="vendorno" class="user" type="text" required="" id="vendorno">
+				</div>
+				<div class="pom-agile">
+					<span class="fa fa-eye" aria-hidden="true"></span>
+					<input placeholder="Password" name="Password" class="pass" type="password" required="" id="loginpassword">
+
+				</div>
+				<div class="txt-rt" style="padding-top: 5px;"><label id="hint"></label><span><i class="fa fa-question"></i></span></div>
+				<div class="sub-w3l" >
+					<div class="sub-agile">
+						<input type="checkbox" id="brand1" value="" >
+						<label for="brand1" style="color: gray;">
+							<span></span>Remember me</label>
+						</div>
+						<!-- 	<a href="#"  style="color: gray;">Forgot Password?</a> -->
+						<div class="clear"></div>
+					</div>
+					<div class="right-w3l">
+						<input type="submit" value="Login" id="loginbtn" style="background-color: #245406 !important;">
+						<br><br><span id="alert" style="color:red;"></span>
+					</div>
+
+				</div>
+			</div>
+			<!--//main-->
+			<!--footer-->
+			<div class="footer">
+				<p>&copy; 2018 Diesel Locomotive Works. <br>All rights reserved 
+				</p>
+			</div>
+			<!--//footer-->
+			<script src="script/sc_index.js"></script>
+<script type="text/javascript">
+		$(".fa-question").click(function(){
+		$("#loginpassword").attr("placeholder", "Default : Vendor no");
+	});
+		$(".fa-eye").click(function(){
+			$("#loginpassword").attr("type", "text");
+		});
+</script>
+		</body>
+
+		</html>
