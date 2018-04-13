@@ -6,7 +6,7 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Bill Payment Info</name>
+    <name>DLW Bill Payment Status</name>
     <description>
         Hello World sample application that responds to the deviceready event.
     </description>
