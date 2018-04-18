@@ -21,7 +21,7 @@ $("#loginbtn").click(function(){
     beforeSend: function(){ $("#logintbtn").val('Validationg...');},
     success: function(data){
       var arr = JSON.parse(data);
-
+    
       if(arr.d.length >0){
 
         localStorage.setItem("username", arr.d[0].username);
